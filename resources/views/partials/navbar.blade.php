@@ -6,17 +6,17 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
-            <li class="nav-item {{ $title === 'HOME' ? 'active' : '' }}">
-              <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item {{ $title === 'ABOUT' ? 'active' : '' }}">
-              <a class="nav-link" href="/about">About</a>
-            </li>
-            <li class="nav-item {{ $title === 'BLOG' ? 'active' : '' }}">
-              <a class="nav-link" href="/posts">Blog</a>
+            <li class="nav-item">
+              <a class="nav-link {{ $active === 'home' ? 'active font-weight-bold' : '' }}" href="/">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+              <a class="nav-link {{ $active === 'about' ? 'active font-weight-bold' : '' }}" href="/about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {{ $active === 'posts' ? 'active font-weight-bold' : '' }}" href="/posts">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {{ $active === 'categories' ? 'active font-weight-bold' : '' }}" href="/categories">Categories</a>
             </li>
           </ul>
         </div>
